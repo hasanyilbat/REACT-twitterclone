@@ -6,7 +6,7 @@ import Seperator from "../components/Seperator";
 const Login = () => {
   return (
     <div className="h-screen flex">
-      <div className="bg-[url(https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png)] flex items-center justify-center bg-center bg-cover w-full">
+      <div className="bg-[url(https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png)] flex items-center justify-center bg-center bg-cover w-[1040px]">
         <Icon name="twitter" width={380} height={380} />
       </div>
       <div className="bg-black h-full p-4 text-white w-[864px]">
@@ -16,7 +16,7 @@ const Login = () => {
             Şu anda olup bitenler
           </h1>
           <h2 className="text-[31px] font-bold mb-8">Twitter'a bugün katıl.</h2>
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-3">
             <Button>
               <div className="flex items-center gap-x-2 text-black text-sm justify-center">
                 <Icon name="google" size={18} />
@@ -29,19 +29,39 @@ const Login = () => {
                 Apple ile kaydol
               </div>
             </Button>
+          </div>
+          <div>
             <Seperator />
-            <button className="bg-[#1d9bf0] w-[300px] h-[40px] rounded-3xl flex items-center font-semibold px-4">
+            <button className="bg-[#1d9bf0] w-[300px] h-[40px] rounded-3xl flex items-center font-semibold px-4 hover:opacity-90 ease-in duration-200">
               <span className="truncate text-[15px]">
                 {" "}
                 Telefon numarası veya e-posta adresiyle kaydol
               </span>
             </button>
-            <p className="w-[300px] text-[11px] text-[#71767b]">
+            <p className="w-[300px] text-[11px] text-[#71767b] mt-1">
               By signing up, you agree to the{" "}
-              <span className="text-[#0e9bc9]">Terms of Service</span> and
-              <span className="text-[#0e9bc9]"> Privacy Policy</span>, including{" "}
-              <span className="text-[#0e9bc9]">Cookie Use</span>.
+              <a href="#" className="text-[#0e9bc9]">
+                Terms of Service
+              </a>{" "}
+              and
+              <a href="#" className="text-[#0e9bc9]">
+                {" "}
+                Privacy Policy
+              </a>
+              , including{" "}
+              <a href="#" className="text-[#0e9bc9]">
+                Cookie Use
+              </a>
+              .
             </p>
+            <div>
+              <p className="text-[17px] mt-[60px] mb-5 font-semibold">
+                Zaten bir hesabın var mı?
+              </p>
+              <button className=" w-[300px] h-[40px] rounded-3xl flex items-center font-semibold px-4 justify-center border border-[#536471] text-[#1d9bf0] text-[15px] hover:bg-bgOpacity ease-in duration-100">
+                Giriş Yap
+              </button>
+            </div>
           </div>
         </div>
       </div>
