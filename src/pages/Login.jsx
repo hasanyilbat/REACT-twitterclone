@@ -5,11 +5,11 @@ import Seperator from "../components/Seperator";
 
 const Login = () => {
   return (
-    <div className="h-screen flex">
-      <div className="bg-[url(https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png)] flex items-center justify-center bg-center bg-cover w-[1040px]">
+    <div className="h-screen  md:flex md:w-screen overflow-x-hidden">
+      <div className="bg-[url(https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png)] flex items-center justify-center bg-center bg-cover md:w-[1040px] w-full hidden md:block">
         <Icon name="twitter" width={380} height={380} />
       </div>
-      <div className="bg-black h-full p-4 text-white w-[864px]">
+      <div className="bg-black h-full p-4 text-white md:w-[864px]">
         <div className="w-[720px] p-5">
           <Icon name="twitter" size={45} />
           <h1 className="text-[64px] font-bold w-[473px] h-[160px] leading-[80px] my-12">
