@@ -1,12 +1,14 @@
 import "./App.css";
-import Login from "./pages/Login";
+import AuthLayout from "./pages/AuthLayout";
+import routes from "./routes/routes";
+import { useRoutes } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 function App() {
-  return (
-    <div>
-      <Login />
-    </div>
-  );
+  const showRoutes = useRoutes(routes);
+
+  return <Provider store={store}>{showRoutes}</Provider>;
 }
 
 export default App;

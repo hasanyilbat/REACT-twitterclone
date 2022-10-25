@@ -1,12 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Button from "../components/Button";
 import Icon from "../components/Icon";
 import Seperator from "../components/Seperator";
 
-const Login = () => {
+const AuthLayout = () => {
+  const user = useSelector((state) => state.auth.user);
+  console.log(user);
+
   return (
     <div className="h-screen  md:flex md:w-screen overflow-x-hidden">
-      <div className="bg-[url(https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png)] flex items-center justify-center bg-center bg-cover md:w-[1040px] w-full hidden md:block">
+      <div className="bg-[url(https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png)] md:flex items-center justify-center bg-center bg-cover md:w-[1040px] w-full hidden md:block">
         <Icon name="twitter" width={380} height={380} />
       </div>
       <div className="bg-black h-full p-4 text-white md:w-[864px]">
@@ -69,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AuthLayout;
