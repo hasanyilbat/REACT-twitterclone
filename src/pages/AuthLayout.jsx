@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Button from "../components/Button";
 import Icon from "../components/Icon";
+import Login from "../components/Login";
 import Seperator from "../components/Seperator";
 
 const AuthLayout = () => {
@@ -69,6 +70,7 @@ const AuthLayout = () => {
           </div>
         </div>
       </div>
+      <Login />
     </div>
   );
 };

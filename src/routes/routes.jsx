@@ -3,9 +3,13 @@ import PrivateRoute from "../components/PrivateRoute";
 
 const routes = [
   {
-    path: "/auth",
+    path: "/",
     element: <AuthLayout />,
-    auth: true,
+    children: [
+      // {
+      //     path: "login"
+      // }
+    ],
   },
 ];
 

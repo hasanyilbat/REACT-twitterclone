@@ -1,5 +1,4 @@
 import "./App.css";
-import AuthLayout from "./pages/AuthLayout";
 import routes from "./routes/routes";
 import { useRoutes } from "react-router-dom";
 import { Provider } from "react-redux";
