@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Icon from "./Icon";
 
 const Login = () => {
-  const [focusInput, setFocusInput] = useState(false);
+  const [focusInput, setFocusInput] = useState(true);
+  const ref = useRef(null);
+
   const handleFocus = (e) => {
-    console.log(e.currentTarget);
     if (e.currentTarget === e.target) {
       setFocusInput(!focusInput);
+      console.log(focusInput);
+    }
+    if (focusInput) {
+      ref.current.focus();
     }
   };
-  console.log(focusInput);
 
   return (
     <div className="relative z-10 text-[#e7e9ea]">
@@ -52,7 +56,8 @@ const Login = () => {
                     <input
                       type="text"
                       className=" bg-black h-5 p-2 w-full outline-none"
-                      onFocus={() => setFocusInput(true)}
+                      ref={ref}
+                      onFocus={() => setFocusInput(false)}
                     />
                   </div>
                 </div>
