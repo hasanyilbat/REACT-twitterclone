@@ -44,75 +44,60 @@ const Login = () => {
               <p className="text-white text-[31px] font-bold mb-12">
                 Hesabını Oluştur
               </p>
-              <Formik>
-                {() => (
-                  <Form>
-                    {" "}
-                    <div
-                      className={classNames({
-                        "border border-gray-600 h-[56px] flex items-end relative group": true,
-                        "border-[#1D9BF0]": !focusInput,
-                      })}
-                      onClick={handleFocus}
+              <form action="">
+                <div className="flex flex-col gap-y-6">
+                  <div
+                    className="border border-gray-600 h-[56px] flex items-end relative group"
+                    onClick={handleFocus}
+                  >
+                    <p
+                      className="absolute top-4 left-2 group-focus-within:-translate-y-3 
+                    group-focus-within:text-xs
+                  group-focus-within:text-[#1D9BF0]
+                    group-focus-within:font-semibold
+                    duration-200"
                     >
-                      <p
-                        className={classNames({
-                          "absolute top-4 left-2 duration-200": true,
-                          "-translate-y-3 text-xs text-[#1D9BF0]": !focusInput,
-                        })}
-                      >
-                        email
-                      </p>
-                      {!focusInput && (
-                        <p className="absolute top-1 right-2 text-sm">1 / 50</p>
-                      )}
-
-                      <div className="px-2 w-full">
-                        <input
-                          type="text"
-                          className={classNames({
-                            "bg-black h-5 p-2 w-full outline-none": true,
-                          })}
-                          ref={ref}
-                          onFocus={() => setFocusInput(false)}
-                          onBlur={handleBlur}
-                        />
-                      </div>
+                      email
+                    </p>
+                    <div className="p-2 w-full">
+                      <input
+                        type="text"
+                        className=" bg-black h-5 p-2 w-full outline-none"
+                        ref={ref}
+                        onFocus={() => setFocusInput(false)}
+                      />
                     </div>
-                    <div
-                      className={classNames({
-                        "border border-gray-600 h-[56px] flex items-end relative group": true,
-                        "border-[#1D9BF0]": !focusInput,
-                      })}
-                      onClick={handleFocus}
+                  </div>
+                  <div
+                    className="border border-gray-600 h-[56px] flex items-end relative group"
+                    onClick={handleFocus}
+                  >
+                    <p
+                      className="absolute top-4 left-2 group-focus-within:-translate-y-3 
+                    group-focus-within:text-xs
+                  group-focus-within:text-[#1D9BF0]
+                    group-focus-within:font-semibold
+                    duration-200"
                     >
-                      <p
-                        className={classNames({
-                          "absolute top-4 left-2 duration-200": true,
-                          "-translate-y-3 text-xs text-[#1D9BF0]": !focusInput,
-                        })}
-                      >
-                        Password
-                      </p>
-                      {!focusInput && (
-                        <p className="absolute top-1 right-2 text-sm">1 / 50</p>
-                      )}
-
-                      <div className="px-2 w-full">
-                        <input
-                          type="text"
-                          className={classNames({
-                            "bg-black h-5 p-2 w-full outline-none": true,
-                          })}
-                          ref={ref}
-                          onFocus={() => setFocusInput(false)}
-                          onBlur={handleBlur}
-                        />
-                      </div>
+                      password
+                    </p>
+                    <div className="p-2 w-full">
+                      <input
+                        type="text"
+                        className=" bg-black h-5 p-2 w-full outline-none"
+                        ref={ref}
+                        onFocus={() => setFocusInput(false)}
+                      />
                     </div>
-                  </Form>
-                )}
-              </Formik>
+                  </div>
+                </div>
+                <p className="text-end text-[#1D9BF0] text-[15px] mt-3">
+                  E-posta kullan
+                </p>
+                <button className="w-full rounded-2xl border h-[50px] bg-[#eff3f4] font-bold my-12">
+                  Kayıt Ol
+                </button>
+              </form>
             </div>
           </div>
         </div>
