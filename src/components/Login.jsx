@@ -4,23 +4,13 @@ import classNames from "classnames";
 import { Formik, Form } from "formik";
 
 const Login = () => {
-  const [focusInput, setFocusInput] = useState(true);
-  const ref = useRef(null);
-
+  const inputEpostaRef = useRef(null);
+  const inputPass  wordRef = useRef(null);
   const handleFocus = (e) => {
-    if (e.currentTarget === e.target) {
-      setFocusInput(!focusInput);
-    }
-    if (focusInput) {
-      ref.current.focus();
-    }
+    console.log(e.target);
+    inputEpostaRef.current.focus();
   };
-  console.log(focusInput);
 
-  const handleBlur = () => {
-    setFocusInput(!focusInput);
-    console.log("blur");
-  };
   return (
     <div className="relative z-10 text-[#e7e9ea]">
       <div
@@ -63,15 +53,11 @@ const Login = () => {
                       <input
                         type="text"
                         className=" bg-black h-5 p-2 w-full outline-none"
-                        ref={ref}
-                        onFocus={() => setFocusInput(false)}
+                        ref={inputEpostaRef}
                       />
                     </div>
                   </div>
-                  <div
-                    className="border border-gray-600 h-[56px] flex items-end relative group"
-                    onClick={handleFocus}
-                  >
+                  <div className="border border-gray-600 h-[56px] flex items-end relative group">
                     <p
                       className="absolute top-4 left-2 group-focus-within:-translate-y-3 
                     group-focus-within:text-xs
@@ -85,8 +71,6 @@ const Login = () => {
                       <input
                         type="text"
                         className=" bg-black h-5 p-2 w-full outline-none"
-                        ref={ref}
-                        onFocus={() => setFocusInput(false)}
                       />
                     </div>
                   </div>
